@@ -1,0 +1,86 @@
+/*
+ Theme Name:   Sydney Child
+ Description:  Sydney Child Theme
+ Author:       Tyler Dowdell
+ Author URI:  
+ Template:     sydney
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/* ----------------------
+HEADER
+-------------------------*/
+
+.child-header-home{
+	height: 600px;
+	width:100%;
+	background: #259543; 
+	background: -moz-linear-gradient(left,  #259543 0%, #228c5c 21%, #228b62 23%, #228b63 25%, #228a69 28%, #24896b 28%, #21886b 29%, #238672 34%, #208575 35%, #228477 35%, #1f8180 42%, #218082 42%, #218084 43%, #207d8c 48%, #217e8f 48%, #1f7b90 50%, #207c93 51%, #1f799e 57%, #1e789d 58%, #1f78a0 58%, #1e76a4 61%, #1e76a6 64%, #1f74ab 65%, #1d72b5 72%, #1e70b9 73%, #1c6dbc 78%, #1d6ebf 78%, #1c6dbf 81%, #1c6bc7 84%, #1c6bc8 88%, #1c6ace 91%, #1c6acc 99%, #2069d0 99%, #1f69cc 99%, #166bc6 100%, #186dc8 100%, #1b6bce 100%, #1d66cf 100%, #fbfffd 100%, #fefffa 100%, #ffffff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #259543 0%,#228c5c 21%,#228b62 23%,#228b63 25%,#228a69 28%,#24896b 28%,#21886b 29%,#238672 34%,#208575 35%,#228477 35%,#1f8180 42%,#218082 42%,#218084 43%,#207d8c 48%,#217e8f 48%,#1f7b90 50%,#207c93 51%,#1f799e 57%,#1e789d 58%,#1f78a0 58%,#1e76a4 61%,#1e76a6 64%,#1f74ab 65%,#1d72b5 72%,#1e70b9 73%,#1c6dbc 78%,#1d6ebf 78%,#1c6dbf 81%,#1c6bc7 84%,#1c6bc8 88%,#1c6ace 91%,#1c6acc 99%,#2069d0 99%,#1f69cc 99%,#166bc6 100%,#186dc8 100%,#1b6bce 100%,#1d66cf 100%,#fbfffd 100%,#fefffa 100%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #259543 0%,#228c5c 21%,#228b62 23%,#228b63 25%,#228a69 28%,#24896b 28%,#21886b 29%,#238672 34%,#208575 35%,#228477 35%,#1f8180 42%,#218082 42%,#218084 43%,#207d8c 48%,#217e8f 48%,#1f7b90 50%,#207c93 51%,#1f799e 57%,#1e789d 58%,#1f78a0 58%,#1e76a4 61%,#1e76a6 64%,#1f74ab 65%,#1d72b5 72%,#1e70b9 73%,#1c6dbc 78%,#1d6ebf 78%,#1c6dbf 81%,#1c6bc7 84%,#1c6bc8 88%,#1c6ace 91%,#1c6acc 99%,#2069d0 99%,#1f69cc 99%,#166bc6 100%,#186dc8 100%,#1b6bce 100%,#1d66cf 100%,#fbfffd 100%,#fefffa 100%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#259543', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+	margin-top:-10px;
+	padding-top: 72px;
+
+}
+
+.inner_right{
+	margin-top: 20px;
+	height: 100px;
+}
+
+.inner_right h1{
+	margin-top: 100px;
+	color:white;
+	text-align: right;
+
+}
+
+.inner_right h4{
+	color: white;
+	text-align: right;
+}
+
+.name-stars-header{
+	margin-left: 20px;
+	max-width: 5%;
+	height: auto;
+}
+
+
+/*--------------------------
+HOMEPAGE
+---------------------------*/
+
+.page .page-wrap .content-wrapper, .single .page-wrap .content-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+p{
+	color:#000000;
+	font-size: 18px !important;
+}
+
+.odd{
+	background-color: #f4f4f4;
+}
+
+.even{
+	background-color: #ffffff;
+}
+
+
+.odd h2{
+	text-align: center;
+	color: #1b69cf;
+}
+
+.even h2{
+	text-align: center;
+	color: #1b69cf;
+}
+}
