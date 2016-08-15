@@ -28,7 +28,7 @@ HEADER
 }
 
 .inner_right{
-	margin-top: 20px;
+	margin-top: -40px;
 	height: 100px;
 }
 
@@ -50,6 +50,9 @@ HEADER
 	height: auto;
 }
 
+.mainnav{
+	
+}
 
 /*--------------------------
 HOMEPAGE
@@ -63,6 +66,19 @@ HOMEPAGE
 p{
 	color:#000000;
 	font-size: 18px !important;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+}
+
+h3{
+	color:#000000;
+	font-size: 1vmax !important;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+	font-style: italic;
+	text-align: center;
 }
 
 .odd{
@@ -83,4 +99,119 @@ p{
 	text-align: center;
 	color: #1b69cf;
 }
+
+.left-service{
+	margin-bottom: 70px;
+	width: 100%;
+}
+
+.right-service{
+	margin-bottom: 70px;
+	width: 100%;
+}
+
+.text-image-top-left{
+	position: absolute; 
+	top: 13%; 
+	left: 10%; 
+	width: auto;
+	font-size: 2.5vmax !important;
+	color: #ffffff;
+}
+
+.text-image-top-right{
+	position: absolute; 
+	top: 20%; 
+	left: 7%; 
+	width: 100%;
+	font-size: 2.5vmax !important;
+	color: #ffffff;
+}
+
+.text-image-bottom-left{
+	position: absolute; 
+	top: 45%; 
+	left: 10%; 
+	width: 100%;
+	font-size: 2.5vmax !important;
+	color: #ffffff;
+}
+
+.text-image-bottom-right{
+	position: absolute; 
+	top: 69%; 
+	left: 7%; 
+	width: 100%;
+	font-size: 2.5vmax !important;
+	color: #ffffff;
+}
+
+.text-image-bottom2{
+	position: absolute; 
+	top: 80%; 
+	left: 10%; 
+	width: 100%;
+	font-size: 2.5vmax !important;
+	color: #ffffff;
+}
+
+.text-stroke{
+	color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+    
+.home-info{
+	font-style: italic;
+	color:#000000;
+	font-size: 24px !important;
+	padding-left: 68px;
+	padding-bottom: 15px;
+}
+
+.shape1{
+	margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+
+.testimonial{
+	margin-bottom: 15px;
+	margin-top: -37px;
+	height: auto;
+	width: 55%;
+}
+
+.arrow{
+	font-size: 6.5vmax !important;
+	margin-top: -27%;
+	color: #1b69cf;
+}
+
+.textTestimonial{
+	font-style: italic;
+	color:#000000;
+	font-size: 24px !important;
+	padding-bottom: 15px;
+}
+
+.description{
+	color:#000000;
+	font-size: 1.3vmax !important;
+	padding-bottom: 15px;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.btn-primary{
+	display: block;
+	background-color: #1b69cf;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 30px;
 }
