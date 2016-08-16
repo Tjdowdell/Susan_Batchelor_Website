@@ -50,8 +50,38 @@ HEADER
 	height: auto;
 }
 
-.mainnav{
-	
+/* ----------------------
+FOOTER
+-------------------------*/
+.contact_icon{
+	width: 12% !important;
+    height: auto;
+}
+
+.footer_p{
+	color: #ffffff;
+	margin-top: -10%
+}
+
+.footer-widgets{
+	    padding: 30px 0 !important;
+}
+
+.social_icon{
+    width: 14% !important;
+    height: auto;
+    margin-left: 13%;
+}
+
+.iict_img{
+    width: 50%;
+    height: auto;
+    text-align: center;
+    float: right;
+}
+
+.site-info {
+	text-align: center !important;
 }
 
 /*--------------------------
@@ -214,4 +244,12 @@ h3{
 	text-align: center;
 	margin: auto;
 	margin-bottom: 30px;
+}
+
+/*--------------------------
+ABOUT ME
+---------------------------*/
+
+.col-xs-6{
+	margin-bottom: 5% !important;
 }
