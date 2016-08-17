@@ -250,6 +250,51 @@ h3{
 ABOUT ME
 ---------------------------*/
 
-.col-xs-6{
+.col-xs-8{
 	margin-bottom: 5% !important;
+}
+
+.contact_icon2{
+	width: 9% !important;
+    height: auto;
+}
+
+.contact_info{
+	color: #000000;
+    font-size: 24px !important;
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    margin-top: -6%;
+}
+
+.contact_h3{
+	color:#1b69cf;
+	font-size: 1.5vmax !important;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 15px;
+	font-style: italic;
+	text-align: center;
+	margin-top: 5%;
+	margin-left: -50%;
+}
+.wpforms-field-label{
+	color: #1b69cf !important;
+}
+
+.quote{
+	color: #000000 !important;
+    font-size: 1.5vmax !important;
+    font-style: italic;
+    margin: 2% 5% 2% 5%;
+}
+
+.information{
+    color: #000000;
+    font-size: 22px !important;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    margin: 2% 0% 2% 0%;
 }

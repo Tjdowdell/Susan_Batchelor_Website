@@ -9,7 +9,6 @@ Template Name: Custom Home Page
 
 	global $post;
 	$post_id = $post->ID;
-
 	$post_meta = get_post_meta($post_id);
 
 
@@ -98,9 +97,9 @@ Template Name: Custom Home Page
 </div>
 
 <div class="row odd">
-	<h2>Funeral Celebrant</h2>
-	<h3>Should you need me, I’ll be right beside you</h3>
-	<p class="description">I am also a Funeral Celebrant and I feel very privileged to help those who are grieving at a most difficult time in life.  To be that support and to be respectful to the family’s wishes at this time is very important to me.  My gift is to be of service.  I hope that you won’t require my services but if you should, I offer a very professional, caring, understanding and stress-free service working closely with the Oceanview Funeral Home.</p>
+	<h2><?php echo $post_meta['8.1_funeral_celebrant_title'][0]?></h2>
+	<h3><?php echo $post_meta['8.2_funeral_celebrant_subtitle'][0]?></h3>
+	<p class="description"><?php echo $post_meta['8.3_funeral_celebrant_text'][0]?></p>
 	<button class="btn btn-primary" type="button" href="#">Learn More</button>
 </div>
 
