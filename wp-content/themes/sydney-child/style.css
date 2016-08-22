@@ -298,3 +298,12 @@ ABOUT ME
     padding-bottom: 15px;
     margin: 2% 0% 2% 0%;
 }
+
+/*--------------------------
+MAIN SERVICES PAGE
+---------------------------*/
+.service_info{
+	text-align: left;
+    font-size: 26px !important;
+    color: #259540;
+}

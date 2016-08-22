@@ -1,10 +1,7 @@
 <?php
 
-/*
+/*		Template Name: Custom Home Page 		*/
 
-Template Name: Custom Home Page
-
-*/
 	get_header();
 
 	global $post;
