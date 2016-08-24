@@ -100,6 +100,11 @@
 	<button class="btn btn-primary" type="button" href="#">Learn More</button>
 </div>
 
-<div class="row even"></div>
+<div class="row even">
+	<div class='subscribe-bottom'>
+		<h2>Enter Your Details Below and Subscribe to My Blog and Other Member Benefits</h2>
+		<?php  echo do_shortcode('[mc4wp_form id="64"]') ?>
+	</div>
+</div>
 
 <?php get_footer(); ?>

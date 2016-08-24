@@ -52,6 +52,7 @@ HEADER MOST PAGES
 .call-action{
 	text-align: left !important;
 	margin: 5% 5% 0% 6%;
+	font-size: 18px;
 }
 
 #s{
@@ -65,9 +66,9 @@ HEADER MOST PAGES
 }
 
 .subscribe{
-	border: 1px solid white;
+	border: 1px solid transparent;
 	border-radius: 15px;
-	max-width: 80%;
+	width: 100%;
 }
 
 /* ----------------------
@@ -304,6 +305,7 @@ h3{
 	text-align: center;
 	margin: auto;
 	margin-bottom: 30px;
+	border-radius: 15px;
 }
 
 /*--------------------------
@@ -359,6 +361,13 @@ ABOUT ME
     margin: 2% 0% 2% 0%;
 }
 
+.wpforms-form button input[type="submit"]:hover{
+	background-color: #1c6acd;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
 /*--------------------------
 MAIN SERVICES PAGE
 ---------------------------*/
@@ -409,12 +418,100 @@ a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
 MAILCHIMP STYLING
 ---------------------------*/
 
-#mc4wp-form-fields .input{
-	width: 25% !important;
+.mc4wp-form-fields{
+	text-align: right;
+}
+
+.mc4wp-form-fields p{
+	display: inline-block;
+	padding: 10px;
+}
+
+.mc4wp-form-fields p label{
+	display: none;
+}
+
+.mc4wp-form-fields input[type="text"], .mc4wp-form-fields input[type="email"]{
+	height: 35px;
+    width: 100%;
+
+}
+
+.mc4wp-form-fields input[type="submit"]{
+	width: 153px;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 15px;
+	transition: 1s;
+}
+
+.mc4wp-form-fields input[type="submit"]:hover{
+	color: #1c6acd;
+	background: #fff
 }
 
 .mc4wp-form-basic label, .mc4wp-form-theme label {
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+    color: #f4f4f4 !important;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
     font-weight: 700;
-    margin-bottom: 6px;
-    display: block;
-    color: #f4f4f4;
+    color: #fff;
+}
+
+
+.mc4wp-form-fields p:first-child{
+	margin-top: 20px;
+}
+
+.subscribe-bottom .call-action{
+	text-align: left !important;
+	margin: 5% 5% 0% 6%;
+	font-size: 18px;
+}
+
+#s{
+	height: 30px;
+}
+
+.subscribe-bottom .mc4wp-form-basic input[type=submit]{
+	background: #1c6acd;
+	border: solid 1px white;
+	border-radius: 15px;
+}
+
+.subscribe-bottom{
+	border: 1px solid transparent;
+	border-radius: 15px;
+	width: 100%;
+
+}
+
+.mc4wp-form-fields{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.subscribe-bottom .mc4wp-form-fields input[type="submit"]{
+	width: 153px;
+	background: #1c6acd;
+	border: 2px solid white;
+	border-radius: 15px;
+	transition: 1s;
+}
+
+.subscribe-bottom .mc4wp-form-fields input[type="submit"]:hover{
+	color: #1c6acd;
+	background: #fff;
+	border: 2px solid #1c6acd;
+	border-radius: 15px;
+}
+.subscribe-bottom h2{
+	font-size: 33px;
+}
