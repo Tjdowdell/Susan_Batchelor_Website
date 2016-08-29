@@ -61,13 +61,18 @@
 				WPFormsBuilder.formSave(false);
 			}
 
+			wpforms_builder.saved_state = $('#wpforms-builder-form').serializeJSON();
+
 			// Setup/cache some vars not available before
 			s.formID          = $('#wpforms-builder-form').data('id');
 			s.formData        = $('#wpforms-builder-form').serializeObject();
 			s.pagebreakTop    = $('.wpforms-pagebreak-top').length;
 			s.pagebreakBottom = $('.wpforms-pagebreak-bottom').length;
 			
-			wpforms_builder.saved_state = $('#wpforms-builder-form').serializeJSON();
+			// @todo - performance testing
+			//wpforms_builder.saved_state = $('#wpforms-builder-form').serializeJSON();
+			//jQuery.parseJSON(json);
+			//console.log( $(':input').length);
 			
 			// If there is a section configured, display it. Otherwise
 			// we show the first panel by default.
@@ -1722,6 +1727,22 @@
 
 			// Global select field mapping
 			jQuery(document).on('wpformsFieldUpdate', WPFormsBuilder.fieldMapSelect);
+
+			// Restrict user money input fields
+			$(document).on('input', '.wpforms-money-input', function(event) {
+				var $this = $(this),
+					amount = $this.val();
+				$this.val(amount.replace(/[^0-9.,]/g, ''));
+			});
+
+			// Format user money input fields
+			$(document).on('focusout', '.wpforms-money-input', function(event) {
+				var $this     = $(this),
+					amount    = $this.val(),
+					sanitized = wpf.amountSanitize(amount),
+					formatted = wpf.amountFormat(sanitized);
+				$this.val(formatted);
+			});	
 		},
 
 		/**

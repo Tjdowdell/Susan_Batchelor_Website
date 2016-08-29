@@ -353,6 +353,8 @@ class WPForms_Settings {
 				<div class="wpforms-circle-11 wpforms-circle"></div>
 				<div class="wpforms-circle-12 wpforms-circle"></div>
 			</div>
+
+			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 			
 			<div id="wpforms-tabs" class="wpforms-clear">
 

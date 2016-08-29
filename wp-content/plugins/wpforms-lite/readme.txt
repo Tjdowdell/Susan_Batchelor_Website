@@ -163,6 +163,10 @@ Syed Balkhi
 
 == Changelog ==
 
+= 1.2.6 =
+- Added: Miscellaneous internal improvements
+- Fixed: Incorrectly named variables in the front-end javascript preventing features from properly being extendable
+
 = 1.2.5.1 =
 - Fixed: Removed duplicate Settings page title
 

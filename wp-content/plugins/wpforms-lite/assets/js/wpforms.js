@@ -25,16 +25,11 @@
 		 */
 		ready: function() {
 
-			// Payments: Update Total field(s) with latest calculation
-			$('.wpforms-payment-total').each(function(index, el) {
-				WPForms.calculateTotalUpdate(this);
-			})
-
 			WPForms.loadValidation();
 			WPForms.loadDatePicker();
 			WPForms.loadTimePicker();
 			WPForms.loadInputMask();
-			WPForms.loadCreditCardValidation();
+			WPForms.loadPayments();
 		},
 
 		/**
@@ -70,20 +65,6 @@
 					// @todo validate CVC and expiration
 				}
 
-				// Payments: Validate method for currency
-				// @link https://github.com/jzaefferer/jquery-validation/blob/master/src/additional/currency.js
-				$.validator.addMethod( "currency", function(value, element, param) {
-					var isParamString = typeof param === "string",
-						symbol = isParamString ? param : param[0],
-						soft = isParamString ? true : param[1],
-						regex;
-					symbol = symbol.replace( /,/g, "" );
-					symbol = soft ? symbol + "]" : symbol + "]?";
-					regex = "^[" + symbol + "([1-9]{1}[0-9]{0,2}(\\,[0-9]{3})*(\\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\\.[0-9]{0,2})?|0(\\.[0-9]{0,2})?|(\\.[0-9]{1,2})?)$";
-					regex = new RegExp(regex);
-					return this.optional(element) || regex.test(value);
-				}, "Please use a valid currency format");
-
 				// Validate method for file extensions
 				$.validator.addMethod( "extension", function(value, element, param) {
 					param = typeof param === "string" ? param.replace( /,/g, "|" ) : "png|jpe?g|gif";
@@ -117,8 +98,8 @@
 					var form   = $(this),
 						formID = form.data('formid');
 
-					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+id].hasOwnProperty('validate')) {	
-						properties = window['wpforms_'+id].validate;
+					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+formID].hasOwnProperty('validate')) {	
+						properties = window['wpforms_'+formID].validate;
 					} else if ( typeof wpforms_validate != "undefined") {
 						properties = wpforms_validate;
 					} else {
@@ -153,8 +134,8 @@
 						form    = element.closest('.wpforms-form'),
 						formID  = form.data('formid');
 
-					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+id].hasOwnProperty('pickadate') ) {	
-						properties = window['wpforms_'+id].pickadate;
+					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+formID].hasOwnProperty('pickadate') ) {	
+						properties = window['wpforms_'+formID].pickadate;
 					} else if ( typeof wpforms_pickadate != "undefined") {
 						properties = wpforms_pickadate;
 					} else {
@@ -186,8 +167,8 @@
 						form    = element.closest('.wpforms-form'),
 						formID  = form.data('formid');
 
-					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+id].hasOwnProperty('pickatime') ) {	
-						properties = window['wpforms_'+id].pickadate;
+					if (typeof window['wpforms_'+formID] != "undefined" && window['wpforms_'+formID].hasOwnProperty('pickatime') ) {	
+						properties = window['wpforms_'+formID].pickadate;
 					} else if ( typeof wpforms_pickatime != "undefined") {
 						properties = wpforms_pickatime;
 					} else {
@@ -216,13 +197,18 @@
 		},
 
 		/**
-		 * Payments: Load credit card validation.
+		 * Payments: Do various payment-related tasks on load.
 		 *
-		 * @since 1.2.3
+		 * @since 1.2.6
 		 */
-		loadCreditCardValidation: function() {
+		loadPayments: function() {
 
-			// Only load if jQuery payment library exists
+			// Update Total field(s) with latest calculation
+			$('.wpforms-payment-total').each(function(index, el) {
+				WPForms.amountTotal(this);
+			})
+
+			// Credit card valdation
 			if(typeof $.fn.payment !== 'undefined') { 
 				$('.wpforms-field-credit-card-cardnumber').payment('formatCardNumber');
 				$('.wpforms-field-credit-card-cardcvc').payment('formatCardCVC');
@@ -248,8 +234,24 @@
 
 			// Payments: Update Total field(s) when latest calculation.
 			$(document).on('change input', '.wpforms-payment-price', function(event) {
-				WPForms.calculateTotalUpdate(this);
+				WPForms.amountTotal(this);
 			});
+
+			// Payments: Restrict user input payment fields
+			$(document).on('input', '.wpforms-payment-user-input', function(event) {
+				var $this = $(this),
+					amount = $this.val();
+				$this.val(amount.replace(/[^0-9.,]/g, ''));
+			});	
+
+			// Payments: Sanitize/format user input amounts
+			$(document).on('focusout', '.wpforms-payment-user-input', function(event) {
+				var $this     = $(this),
+					amount    = $this.val(),
+					sanitized = WPForms.amountSanitize(amount),
+					formatted = WPForms.amountFormat(sanitized);
+				$this.val(formatted);
+			});	
 
 			// OptinMonster: initialize again after OM is finished.
 			// This is to accomodate moving the form in the DOM.
@@ -258,7 +260,11 @@
 			});
 		},
 
-
+		/**
+		 * Update Pagebreak navigation.
+		 *
+		 * @since 1.2.2
+		 */
 		pagebreakNav: function(el) {
 
 			var $this      = $(el),
@@ -360,46 +366,189 @@
 		 *
 		 * @since 1.2.3
 		 */
-		calculateTotal: function(el) {
+		amountTotal: function(el) {
 
-			var $form = $(el),
-				total = 0.00;
+			var $form                = $(el).closest('.wpforms-form'),
+				total                = 0,
+				totalFormatted       = 0,
+				totalFormattedSymbol = 0,
+				currency             = WPForms.getCurrency();
+
 			$('.wpforms-payment-price').each(function(index, el) {
 				var amount = 0,
 					$this  = $(this);
-				if ($this.attr('type') === 'text') {
+
+				if ($this.attr('type') === 'text' || $this.attr('type') === 'hidden' ) {
 					amount = $this.val();
 				} else if ($this.attr('type') === 'radio' && $this.is(':checked')) {
 					amount = $this.data('amount');
 				}
-				if (amount != 0) {
-					amount = amount.replace(/[^0-9.]/gi,'');
-					amount = parseFloat(amount).toFixed(2).replace(/(\d)(?=(\d{6})+\.)/g, "$1,");
-					total  = parseFloat(total)+parseFloat(amount);
+				if (!WPForms.empty(amount)) {
+					amount = WPForms.amountSanitize(amount);
+					total  = Number(total)+Number(amount);
 				}
 			});
-			return parseFloat(total).toFixed(2);
+
+			totalFormatted = WPForms.amountFormat(total);
+
+			if ( 'left' == currency.symbol_pos) {
+				totalFormattedSymbol = currency.symbol+' '+totalFormatted;
+			} else {
+				totalFormattedSymbol = totalFormatted+' '+currency.symbol;
+			}
+
+			$form.find('.wpforms-payment-total').each(function(index, el) {
+				if ($(this).attr('type') == 'hidden') {
+					$(this).val(totalFormattedSymbol);
+				} else {
+					$(this).text(totalFormattedSymbol);
+				}
+			});
 		},
 
 		/**
-		 * Payments: Update Total field(s) with latest calculation.
+		 * Sanitize amount and convert to standard format for calculations.
 		 *
-		 * @since 1.2.3
+		 * @since 1.2.6
 		 */
-		calculateTotalUpdate: function(el) {
+		amountSanitize: function(amount) {
 
-			var $form = $(el).closest('.wpforms-form'),
-				total = WPForms.calculateTotal($form);
-			if (isNaN(total)) {
-				total = '0.00';
-			}
-			$form.find('.wpforms-payment-total').each(function(index, el) {
-				if ($(this).attr('type') == 'hidden') {
-					$(this).val('$'+total);
-				} else {
-					$(this).text('$'+total);
+			var currency = WPForms.getCurrency();
+
+			amount = amount.replace(/[^0-9.,]/g,'');
+
+			if ( currency.decimal_sep == ',' && ( amount.indexOf(currency.decimal_sep) !== -1 ) ) {
+				if ( currency.thousands_sep == '.' && amount.indexOf(currency.thousands_sep) !== -1 ) {;
+					amount = amount.replace(currency.thousands_sep,'');
+				} else if( currency.thousands_sep == '' && amount.indexOf('.') !== -1 ) {
+					amount = amount.replace('.','');
 				}
-			});
+				amount = amount.replace(currency.decimal_sep,'.');
+			} else if ( currency.thousands_sep == ',' && ( amount.indexOf(currency.thousands_sep) !== -1 ) ) {
+				amount = amount.replace(currency.thousands_sep,'');
+			}
+
+			return WPForms.numberFormat( amount, 2, '.', '' );	
+		},
+
+		/**
+		 * Format amount.
+		 *
+		 * @since 1.2.6
+		 */
+		amountFormat: function(amount) {
+
+			var currency = WPForms.getCurrency();
+
+			amount = String(amount);
+
+			// Format the amount
+			if ( currency.decimal_sep == ',' && ( amount.indexOf(currency.decimal_sep) !== -1 ) ) {
+				var sepFound = amount.indexOf(currency.decimal_sep);
+					whole    = amount.substr(0, sepFound);
+					part     = amount.substr(sepFound+1, amount.strlen-1);
+				amount = whole + '.' + part;
+			}
+
+			// Strip , from the amount (if set as the thousands separator)
+			if ( currency.thousands_sep == ',' && ( amount.indexOf(currency.thousands_sep) !== -1 ) ) {
+				amount = amount.replace(',','');
+			}
+
+			if ( WPForms.empty( amount ) ) {
+				amount = 0;
+			}
+
+			return WPForms.numberFormat( amount, 2, currency.decimal_sep, currency.thousands_sep );
+		},
+
+		/**
+		 * Get site currency settings.
+		 *
+		 * @since 1.2.6
+		 */
+		getCurrency: function() {
+
+			var currency = {
+				thousands_sep: ',',
+				decimal_sep: '.',
+				symbol: '$',
+				symbol_pos: 'left' 
+			}
+
+			if ( 'undefined' !== wpforms_currency) {
+				currency.thousands_sep = wpforms_currency.thousands;
+				currency.decimal_sep   = wpforms_currency.decimal;
+				currency.symbol        = wpforms_currency.symbol;
+				currency.symbol_pos    = wpforms_currency.symbol_pos;
+			}
+
+			return currency;
+		},
+
+		/**
+		 * Format number.
+		 *
+		 * @link http://locutus.io/php/number_format/
+		 * @since 1.2.6
+		 */
+		numberFormat: function (number, decimals, decimalSep, thousandsSep) { 
+
+			number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
+			var n = !isFinite(+number) ? 0 : +number
+			var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+			var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
+			var dec = (typeof decimalSep === 'undefined') ? '.' : decimalSep
+			var s = ''
+
+			var toFixedFix = function (n, prec) {
+				var k = Math.pow(10, prec)
+				return '' + (Math.round(n * k) / k).toFixed(prec)
+			}
+
+			// @todo: for IE parseFloat(0.55).toFixed(0) = 0;
+			s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
+			if (s[0].length > 3) {
+				s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+			}
+			if ((s[1] || '').length < prec) {
+				s[1] = s[1] || ''
+				s[1] += new Array(prec - s[1].length + 1).join('0')
+			}
+
+			return s.join(dec)
+		},
+
+		/**
+		 * Empty check similar to PHP.
+		 *
+		 * @link http://locutus.io/php/empty/
+		 * @since 1.2.6
+		 */
+		empty: function(mixedVar) {
+		
+			var undef
+			var key
+			var i
+			var len
+			var emptyValues = [undef, null, false, 0, '', '0']
+
+			for (i = 0, len = emptyValues.length; i < len; i++) {
+				if (mixedVar === emptyValues[i]) {
+					return true
+				}
+			}
+
+			if (typeof mixedVar === 'object') {
+				for (key in mixedVar) {
+					if (mixedVar.hasOwnProperty(key)) {
+						return false
+					}
+				}
+				return true
+			}
+
+			return false
 		}
 	}
 

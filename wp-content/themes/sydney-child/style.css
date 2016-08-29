@@ -111,6 +111,13 @@ HEADER ABOUT PAGE
 	height: auto;
 }
 
+.inner_left2{
+	text-align: center;
+    margin-top: 3%;
+    margin-left: 28%;
+    margin-right: auto;
+}
+
 /* ----------------------
 FOOTER
 -------------------------*/
@@ -414,6 +421,23 @@ a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     margin-top: 1%;
 }
 
+.content-area .post-wrap, .contact-form-wrap {
+    padding-right: 20px;
+    margin-top: 2%;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    left: auto;
+    background-color: #1b69cf;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.woocommerce form .form-row label {
+    line-height: 2;
+    color: #1b69cf;
+}
+
 /*--------------------------
 MAILCHIMP STYLING
 ---------------------------*/
@@ -514,4 +538,14 @@ label {
 }
 .subscribe-bottom h2{
 	font-size: 33px;
+}
+
+/*--------------------------
+WPFORMS STYLING
+---------------------------*/
+
+ div.wpforms-container-full .wpforms-form button[type=submit]{
+    background-color: #1b69cf !important;
+    border-radius: 15px;
+    color: #fff !important;
 }

@@ -30,7 +30,7 @@ function child_sydney_custom_header(){ ?>
 
 		<div class='subscribe'>
 			<h4 class='call-action'>Enter Your Details Below and Subscribe to My Blog and Other Member Benefits</h4>
-			<?php  echo do_shortcode('[mc4wp_form id="64"]') ?>
+			<?php  echo do_shortcode('[mc4wp_form id="70"]') ?>
 		</div>
 	</div>
 </div>

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WPForms package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPForms 1.2.5\n"
+"Project-Id-Version: WPForms 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpforms\n"
-"POT-Creation-Date: 2016-08-03 14:56:24+00:00\n"
+"POT-Creation-Date: 2016-08-24 13:56:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,206 +40,206 @@ msgstr ""
 msgid "Error updating form template"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:260
+#: includes/admin/builder/class-builder.php:268
 #: includes/admin/class-editor.php:96
-#: pro/includes/admin/entries/class-entries.php:976
+#: pro/includes/admin/entries/class-entries.php:977
 msgid "Cancel"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:261
+#: includes/admin/builder/class-builder.php:269
 msgid "OK"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:262
+#: includes/admin/builder/class-builder.php:270
 #: includes/admin/class-editor.php:70
 msgid "Close"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:263
+#: includes/admin/builder/class-builder.php:271
 msgid ""
 "Due to form changes, conditional logic rules have been removed or updated:"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:264
-#: pro/includes/admin/entries/class-entries-table.php:141
+#: includes/admin/builder/class-builder.php:272
+#: pro/includes/admin/entries/class-entries-table.php:167
 msgid "Field"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:265
+#: includes/admin/builder/class-builder.php:273
 msgid "Field Locked"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:266
+#: includes/admin/builder/class-builder.php:274
 msgid "This field cannot be deleted because it required by the form template."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:267
+#: includes/admin/builder/class-builder.php:275
 msgid "Available Fields"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:268
+#: includes/admin/builder/class-builder.php:276
 msgid "No fields available"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:269
+#: includes/admin/builder/class-builder.php:277
 msgid "Heads up!"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:271
+#: includes/admin/builder/class-builder.php:279
 msgid "No email fields"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:272
+#: includes/admin/builder/class-builder.php:280
 msgid "Are you sure you want to delete this notification?"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:273
+#: includes/admin/builder/class-builder.php:281
 msgid "Enter a notification name"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:274
+#: includes/admin/builder/class-builder.php:282
 msgid "Eg: User Confirmation"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:275
+#: includes/admin/builder/class-builder.php:283
 msgid "You must provide a notification name"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:276
+#: includes/admin/builder/class-builder.php:284
 msgid ""
 "Form must contain one notification. To disable all notifications use the "
 "setting Notifications dropdown setting."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:277
+#: includes/admin/builder/class-builder.php:285
 #: lite/includes/admin/class-settings.php:131
 #: pro/includes/admin/class-settings.php:135
 msgid "Saving ..."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:278
+#: includes/admin/builder/class-builder.php:286
 msgid "Saved!"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:279
+#: includes/admin/builder/class-builder.php:287
 msgid "Save and Exit"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:280
-#: includes/admin/builder/class-builder.php:341
+#: includes/admin/builder/class-builder.php:288
+#: includes/admin/builder/class-builder.php:349
 msgid "Loading"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:286
+#: includes/admin/builder/class-builder.php:294
 msgid "Use Template"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:287
+#: includes/admin/builder/class-builder.php:295
 msgid ""
 "Changing templates on an existing form will DELETE existing form fields. Are "
 "you sure you want apply the new template?"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:288
+#: includes/admin/builder/class-builder.php:296
 msgid ""
 "You are almost done. To embed this form on your site, please paste the "
 "following shortcode inside a post or page."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:289
+#: includes/admin/builder/class-builder.php:297
 msgid "Or you can follow the instructions in this video."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:290
-#: includes/admin/builder/class-builder.php:391
+#: includes/admin/builder/class-builder.php:298
+#: includes/admin/builder/class-builder.php:399
 msgid "Exit"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:292
+#: includes/admin/builder/class-builder.php:300
 msgid "If you exit without saving, your changes will be lost."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:293
+#: includes/admin/builder/class-builder.php:301
 msgid "Are you sure you want to delete this field?"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:294
+#: includes/admin/builder/class-builder.php:302
 msgid "Please enter a form title."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:295
+#: includes/admin/builder/class-builder.php:303
 msgid "This item must contain at least one choice."
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:296
+#: includes/admin/builder/class-builder.php:304
 #: includes/fields/class-base.php:235 lite/wpforms-lite.php:75
 #: pro/wpforms-pro.php:257
 msgid "Off"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:297
+#: includes/admin/builder/class-builder.php:305
 #: includes/fields/class-base.php:235 lite/wpforms-lite.php:74
 #: pro/wpforms-pro.php:256
 msgid "On"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:298
+#: includes/admin/builder/class-builder.php:306
 #: includes/templates/class-suggestion.php:59
 msgid "Other"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:299
+#: includes/admin/builder/class-builder.php:307
 #: includes/class-frontend.php:482
 #: pro/includes/fields/class-page-break.php:144
 msgid "Previous"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:302
+#: includes/admin/builder/class-builder.php:310
 #: includes/admin/builder/functions.php:210 includes/fields/class-base.php:335
 msgid "Show Smart Tags"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:303
+#: includes/admin/builder/class-builder.php:311
 msgid "Hide Smart Tags"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:304
+#: includes/admin/builder/class-builder.php:312
 msgid "-- Select Field --"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:305
+#: includes/admin/builder/class-builder.php:313
 #: pro/includes/class-provider.php:912
 msgid "-- Select Choice --"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:364
+#: includes/admin/builder/class-builder.php:372
 msgid "Now editing"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:374
-#: pro/includes/admin/entries/class-entries.php:510
+#: includes/admin/builder/class-builder.php:382
+#: pro/includes/admin/entries/class-entries.php:511
 msgid "Preview Form"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:376
+#: includes/admin/builder/class-builder.php:384
 #: includes/admin/overview/class-overview-table.php:159
 msgid "Preview"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:379
+#: includes/admin/builder/class-builder.php:387
 msgid "Embed Form"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:381
+#: includes/admin/builder/class-builder.php:389
 msgid "Embed"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:384
+#: includes/admin/builder/class-builder.php:392
 msgid "Save Form"
 msgstr ""
 
-#: includes/admin/builder/class-builder.php:386
-#: pro/includes/admin/class-settings.php:435
+#: includes/admin/builder/class-builder.php:394
+#: pro/includes/admin/class-settings.php:441
 msgid "Save"
 msgstr ""
 
@@ -302,7 +302,7 @@ msgstr ""
 
 #: includes/admin/builder/panels/class-settings.php:21
 #: includes/admin/class-menu.php:84 lite/includes/admin/class-settings.php:390
-#: pro/includes/admin/class-settings.php:690
+#: pro/includes/admin/class-settings.php:696
 msgid "Settings"
 msgstr ""
 
@@ -471,15 +471,15 @@ msgstr ""
 
 #: includes/admin/class-editor.php:88
 #: includes/admin/overview/class-overview-table.php:250
-#: pro/includes/admin/entries/class-entries.php:388
+#: pro/includes/admin/entries/class-entries.php:389
 msgid ""
 "Whoops, you haven't created a form yet. Want to <a href=\"%s\">give it a go</"
 "a>?"
 msgstr ""
 
-#. #-#-#-#-#  wpforms.pot (WPForms 1.2.5)  #-#-#-#-#
+#. #-#-#-#-#  wpforms.pot (WPForms 1.2.6)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#. #-#-#-#-#  wpforms.pot (WPForms 1.2.5)  #-#-#-#-#
+#. #-#-#-#-#  wpforms.pot (WPForms 1.2.6)  #-#-#-#-#
 #. Author of the plugin/theme
 #: includes/admin/class-menu.php:39 includes/admin/class-menu.php:40
 #: includes/admin/class-menu.php:51
@@ -506,7 +506,7 @@ msgstr ""
 
 #: includes/admin/class-menu.php:72
 #: includes/admin/overview/class-overview-table.php:152
-#: pro/includes/admin/entries/class-entries.php:409 pro/wpforms-pro.php:198
+#: pro/includes/admin/entries/class-entries.php:410 pro/wpforms-pro.php:198
 msgid "Entries"
 msgstr ""
 
@@ -639,9 +639,9 @@ msgstr ""
 
 #: includes/admin/overview/class-overview-table.php:173
 #: includes/admin/overview/class-overview-table.php:191
-#: pro/includes/admin/entries/class-entries-table.php:278
-#: pro/includes/admin/entries/class-entries-table.php:299
-#: pro/includes/admin/entries/class-entries.php:1011
+#: pro/includes/admin/entries/class-entries-table.php:328
+#: pro/includes/admin/entries/class-entries-table.php:349
+#: pro/includes/admin/entries/class-entries.php:1012
 msgid "Delete"
 msgstr ""
 
@@ -699,17 +699,17 @@ msgid "Entry #%d"
 msgstr ""
 
 #: includes/class-preview.php:107
-#: pro/includes/admin/entries/class-entries.php:898
+#: pro/includes/admin/entries/class-entries.php:899
 msgid "This entry does not have any fields"
 msgstr ""
 
 #: includes/class-preview.php:124
-#: pro/includes/admin/entries/class-entries.php:914
+#: pro/includes/admin/entries/class-entries.php:915
 msgid "Field ID #%d"
 msgstr ""
 
 #: includes/class-preview.php:129
-#: pro/includes/admin/entries/class-entries.php:919
+#: pro/includes/admin/entries/class-entries.php:920
 msgid "Empty"
 msgstr ""
 
@@ -788,7 +788,7 @@ msgstr ""
 
 #: includes/class-smart-tags.php:40
 #: pro/includes/admin/entries/class-entries-export.php:172
-#: pro/includes/admin/entries/class-entries-table.php:119
+#: pro/includes/admin/entries/class-entries-table.php:129
 #: pro/includes/fields/class-date-time.php:48
 #: pro/includes/fields/class-date-time.php:77
 #: pro/includes/fields/class-date-time.php:155
@@ -836,7 +836,7 @@ msgstr ""
 msgid "Lost Password URL"
 msgstr ""
 
-#: includes/class-widget.php:127 pro/includes/admin/class-settings.php:518
+#: includes/class-widget.php:127 pro/includes/admin/class-settings.php:524
 msgid "No forms"
 msgstr ""
 
@@ -1005,8 +1005,8 @@ msgstr ""
 #: pro/includes/fields/class-address.php:564
 #: pro/includes/fields/class-date-time.php:289
 #: pro/includes/fields/class-file-upload.php:217
-#: pro/includes/fields/class-payment-multiple.php:174
-#: pro/includes/fields/class-payment-single.php:186
+#: pro/includes/fields/class-payment-multiple.php:177
+#: pro/includes/fields/class-payment-single.php:188
 #: pro/includes/fields/class-url.php:126
 msgid "This field is required"
 msgstr ""
@@ -1731,56 +1731,52 @@ msgstr ""
 msgid "Currency"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:422
-msgid "US Dollars (USD)"
-msgstr ""
-
-#: pro/includes/admin/class-settings.php:424
+#: pro/includes/admin/class-settings.php:430
 msgid "Determines which currency to use for payments."
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:455
+#: pro/includes/admin/class-settings.php:461
 msgid ""
 "You do not have any marketing add-ons activated. You can head over to the <a "
 "href=\"%s\">Add-Ons page</a> to install and activate the add-on for your "
 "provider."
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:476
+#: pro/includes/admin/class-settings.php:482
 msgid "Form(s) imported"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:485
+#: pro/includes/admin/class-settings.php:491
 msgid "Form Import"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:490
+#: pro/includes/admin/class-settings.php:496
 msgid "Select an export file."
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:496
+#: pro/includes/admin/class-settings.php:502
 msgid "Import"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:503
+#: pro/includes/admin/class-settings.php:509
 msgid "Form Export"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:508
+#: pro/includes/admin/class-settings.php:514
 msgid ""
 "Select form(s) to download an export file. This can be imported into another "
 "site."
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:524
+#: pro/includes/admin/class-settings.php:530
 msgid "Export"
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:584
+#: pro/includes/admin/class-settings.php:590
 msgid "Please upload a valid .json form export file."
 msgstr ""
 
-#: pro/includes/admin/class-settings.php:584
+#: pro/includes/admin/class-settings.php:590
 #: pro/includes/admin/entries/class-entries-export.php:293
 msgid "Error"
 msgstr ""
@@ -1805,270 +1801,320 @@ msgstr ""
 msgid "Starred"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries-table.php:120
-#: pro/includes/admin/entries/class-entries.php:1218
+#: pro/includes/admin/entries/class-entries-table.php:125
+msgid "Status"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:126
+#: pro/includes/fields/class-payment-total.php:21
+msgid "Total"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:130
+#: pro/includes/admin/entries/class-entries.php:1303
 msgid "Actions"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries-table.php:245
-#: pro/includes/admin/entries/class-entries.php:242
-msgid "Unstar entry"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:245
-#: pro/includes/admin/entries/class-entries.php:243
-msgid "Star entry"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:250
-#: pro/includes/admin/entries/class-entries.php:245
-msgid "Mark entry unread"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:250
-#: pro/includes/admin/entries/class-entries.php:244
-msgid "Mark entry read"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:270
-msgid "View Form Entry"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:271
-msgid "View"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:277
-msgid "Delete Form Entry"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:293
-msgid "Mark Read"
-msgstr ""
-
-#: pro/includes/admin/entries/class-entries-table.php:294
-#: pro/includes/admin/entries/class-entries.php:1249
-msgid "Mark Unread"
+#: pro/includes/admin/entries/class-entries-table.php:256
+#: pro/includes/admin/entries/class-entries.php:1154
+msgid "Unknown"
 msgstr ""
 
 #: pro/includes/admin/entries/class-entries-table.php:295
-#: pro/includes/admin/entries/class-entries.php:1201
+#: pro/includes/admin/entries/class-entries.php:243
+msgid "Unstar entry"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:295
+#: pro/includes/admin/entries/class-entries.php:244
+msgid "Star entry"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:300
+#: pro/includes/admin/entries/class-entries.php:246
+msgid "Mark entry unread"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:300
+#: pro/includes/admin/entries/class-entries.php:245
+msgid "Mark entry read"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:320
+msgid "View Form Entry"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:321
+msgid "View"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:327
+msgid "Delete Form Entry"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:343
+msgid "Mark Read"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:344
+#: pro/includes/admin/entries/class-entries.php:1334
+msgid "Mark Unread"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries-table.php:345
+#: pro/includes/admin/entries/class-entries.php:1286
 msgid "Star"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries-table.php:296
-#: pro/includes/admin/entries/class-entries.php:1201
+#: pro/includes/admin/entries/class-entries-table.php:346
+#: pro/includes/admin/entries/class-entries.php:1286
 msgid "Unstar"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries-table.php:298
+#: pro/includes/admin/entries/class-entries-table.php:348
 msgid "----------"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries-table.php:342
+#: pro/includes/admin/entries/class-entries-table.php:392
 msgid "Entry marked as read."
 msgid_plural "Entries marked as read."
 msgstr[0] ""
 msgstr[1] ""
 
-#: pro/includes/admin/entries/class-entries-table.php:351
+#: pro/includes/admin/entries/class-entries-table.php:401
 msgid "Entry marked as unread."
 msgid_plural "Entries marked as unread."
 msgstr[0] ""
 msgstr[1] ""
 
-#: pro/includes/admin/entries/class-entries-table.php:360
+#: pro/includes/admin/entries/class-entries-table.php:410
 msgid "Entry starred."
 msgid_plural "Entries starred."
 msgstr[0] ""
 msgstr[1] ""
 
-#: pro/includes/admin/entries/class-entries-table.php:369
+#: pro/includes/admin/entries/class-entries-table.php:419
 msgid "Entry unstarred."
 msgid_plural "Entries unstarred."
 msgstr[0] ""
 msgstr[1] ""
 
-#: pro/includes/admin/entries/class-entries-table.php:378
+#: pro/includes/admin/entries/class-entries-table.php:428
 msgid "Entry successfully deleted."
 msgid_plural "Entries successfully deleted."
 msgstr[0] ""
 msgstr[1] ""
 
-#: pro/includes/admin/entries/class-entries-table.php:392
+#: pro/includes/admin/entries/class-entries-table.php:442
 msgid "Whoops, it appears you do not have any form entries yet."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:185
+#: pro/includes/admin/entries/class-entries.php:186
 msgid "Number of entries per page:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:241
-#: pro/includes/admin/entries/class-entries.php:266
+#: pro/includes/admin/entries/class-entries.php:242
+#: pro/includes/admin/entries/class-entries.php:267
 msgid "Are you sure you want to delete this entry?"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:267
-#: pro/includes/admin/entries/class-entries.php:886
+#: pro/includes/admin/entries/class-entries.php:268
+#: pro/includes/admin/entries/class-entries.php:887
 msgid "Hide Empty Fields"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:268
-#: pro/includes/admin/entries/class-entries.php:886
+#: pro/includes/admin/entries/class-entries.php:269
+#: pro/includes/admin/entries/class-entries.php:887
 msgid "Show Empty Fields"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:269
+#: pro/includes/admin/entries/class-entries.php:270
 msgid "Are you sure you want to delete this note?"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:366
+#: pro/includes/admin/entries/class-entries.php:367
 msgid "All entries marked as read."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:505
+#: pro/includes/admin/entries/class-entries.php:506
 msgid "Edit This Form"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:515
+#: pro/includes/admin/entries/class-entries.php:516
 msgid "Download Export (CSV)"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:520
+#: pro/includes/admin/entries/class-entries.php:521
 msgid "Mark All Read"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:526
+#: pro/includes/admin/entries/class-entries.php:527
 msgid "Select a different form"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:604
+#: pro/includes/admin/entries/class-entries.php:605
 msgid "This entry has been starred."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:616
+#: pro/includes/admin/entries/class-entries.php:617
 msgid "This entry has been unstarred."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:641
+#: pro/includes/admin/entries/class-entries.php:642
 msgid "This entry has been marked unread."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:665
+#: pro/includes/admin/entries/class-entries.php:666
 msgid "Note deleted."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:696
+#: pro/includes/admin/entries/class-entries.php:697
 msgid "Note added."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:714
+#: pro/includes/admin/entries/class-entries.php:715
 msgid "Invalid entry ID."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:727
+#: pro/includes/admin/entries/class-entries.php:728
 msgid "Entry not found."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:740
+#: pro/includes/admin/entries/class-entries.php:741
 msgid "Form not found."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:800
+#: pro/includes/admin/entries/class-entries.php:801
 msgid "Notifications sent!"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:827
+#: pro/includes/admin/entries/class-entries.php:828
 msgid "View Entry"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:829
+#: pro/includes/admin/entries/class-entries.php:830
 msgid "Back to All Entries"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:833
+#: pro/includes/admin/entries/class-entries.php:834
 msgid "Entry %s of %s"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:836
+#: pro/includes/admin/entries/class-entries.php:837
 msgid "Previous form entry"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:837
+#: pro/includes/admin/entries/class-entries.php:838
 msgid "Current form entry"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:838
+#: pro/includes/admin/entries/class-entries.php:839
 msgid "Next form entry"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:954
+#: pro/includes/admin/entries/class-entries.php:955
 msgid "Notes"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:960
-#: pro/includes/admin/entries/class-entries.php:975
+#: pro/includes/admin/entries/class-entries.php:961
+#: pro/includes/admin/entries/class-entries.php:976
 msgid "Add Note"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:984
+#: pro/includes/admin/entries/class-entries.php:985
 msgid "No notes."
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:993
-#: pro/includes/admin/entries/class-entries.php:1085
+#: pro/includes/admin/entries/class-entries.php:994
+#: pro/includes/admin/entries/class-entries.php:1086
 msgid "M j, Y @ g:ia"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1011
+#: pro/includes/admin/entries/class-entries.php:1012
 msgid "Added by"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1011
+#: pro/includes/admin/entries/class-entries.php:1012
 msgid "on"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1044
+#: pro/includes/admin/entries/class-entries.php:1045
 msgid "Debug Information"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1070
+#: pro/includes/admin/entries/class-entries.php:1071
 msgid "Entry Details"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1078
+#: pro/includes/admin/entries/class-entries.php:1079
 msgid "Entry ID:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1084
+#: pro/includes/admin/entries/class-entries.php:1085
 msgid "Submitted on:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1091
+#: pro/includes/admin/entries/class-entries.php:1092
 msgid "Modified on:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1092
+#: pro/includes/admin/entries/class-entries.php:1093
 msgid "M j, Y @ H:i"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1100
+#: pro/includes/admin/entries/class-entries.php:1101
 msgid "User:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1112
+#: pro/includes/admin/entries/class-entries.php:1113
 msgid "User IP:"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1227
+#: pro/includes/admin/entries/class-entries.php:1164
+msgid "Stripe"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1170
+msgid "PayPal Standard"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1182
+msgid "Payment Details"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1189
+msgid " Status:"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1193
+msgid " Total:"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1198
+msgid " Gateway:"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1200
+msgid "Test"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1206
+msgid "Transaction ID:"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1211
+msgid "Note:"
+msgstr ""
+
+#: pro/includes/admin/entries/class-entries.php:1312
 msgid "Print"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1234
+#: pro/includes/admin/entries/class-entries.php:1319
 msgid "Export (CSV)"
 msgstr ""
 
-#: pro/includes/admin/entries/class-entries.php:1241
+#: pro/includes/admin/entries/class-entries.php:1326
 msgid "Resend Notifications"
 msgstr ""
 
@@ -2553,7 +2599,7 @@ msgstr ""
 msgid "Items"
 msgstr ""
 
-#: pro/includes/fields/class-payment-multiple.php:179
+#: pro/includes/fields/class-payment-multiple.php:182
 msgid "Invalid payment option"
 msgstr ""
 
@@ -2586,27 +2632,19 @@ msgstr ""
 msgid "Item Type"
 msgstr ""
 
-#: pro/includes/fields/class-payment-single.php:96
-#: pro/includes/fields/class-payment-single.php:139
+#: pro/includes/fields/class-payment-single.php:97
+#: pro/includes/fields/class-payment-single.php:141
 msgid "Price"
 msgstr ""
 
-#: pro/includes/fields/class-payment-single.php:102
+#: pro/includes/fields/class-payment-single.php:103
 msgid ""
 "Note: Item type is set to hidden and will not be visible when viewing the "
 "form."
 msgstr ""
 
-#: pro/includes/fields/class-payment-single.php:192
-msgid "Please use a valid currency format"
-msgstr ""
-
-#: pro/includes/fields/class-payment-single.php:199
+#: pro/includes/fields/class-payment-single.php:198
 msgid "Amount mismatch"
-msgstr ""
-
-#: pro/includes/fields/class-payment-total.php:21
-msgid "Total"
 msgstr ""
 
 #: pro/includes/fields/class-phone.php:21
@@ -2669,10 +2707,6 @@ msgstr ""
 
 #: pro/includes/payments/functions.php:31
 msgid "Israeli New Sheqel"
-msgstr ""
-
-#: pro/includes/payments/functions.php:32
-msgid "Japanese Yen"
 msgstr ""
 
 #: pro/includes/payments/functions.php:33
@@ -2839,9 +2873,9 @@ msgstr ""
 msgid "Please deactivate WPForms Lite before activating WPForms"
 msgstr ""
 
-#. #-#-#-#-#  wpforms.pot (WPForms 1.2.5)  #-#-#-#-#
+#. #-#-#-#-#  wpforms.pot (WPForms 1.2.6)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  wpforms.pot (WPForms 1.2.5)  #-#-#-#-#
+#. #-#-#-#-#  wpforms.pot (WPForms 1.2.6)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "https://wpforms.com"
 msgstr ""

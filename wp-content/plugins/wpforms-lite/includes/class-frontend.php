@@ -773,6 +773,23 @@ class WPForms_Frontend {
 			true
 		);
 
+		// If we have payment fields then include currency details
+		$payment_fields = array( 'credit-card', 'payment-single', 'payment-multiple', 'payment-total' );
+		if ( $this->assets_global() || true == wpforms_has_field_type( $payment_fields , $this->forms, true ) ) :
+		$currency   = wpforms_setting( 'currency', 'USD' );
+		$currencies = wpforms_get_currencies();
+		wp_localize_script( 
+			'wpforms', 
+			'wpforms_currency',
+			array(
+				'code'       => $currency,
+				'thousands'  => $currencies[$currency]['thousands_separator'],
+				'decimal'    =>	$currencies[$currency]['decimal_separator'],
+				'symbol'     => $currencies[$currency]['symbol'],
+				'symbol_pos' => $currencies[$currency]['symbol_pos']
+			) 
+		);
+		endif;
 
 		// Load reCAPTCHA support if form supports it
 		$site_key   = wpforms_setting( 'recaptcha-site-key' );
