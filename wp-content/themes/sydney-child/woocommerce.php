@@ -15,9 +15,7 @@ get_header(); ?>
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="post-wrap" role="main">
 			<div class="container">
-				<?php 
-					woocommerce_content();
-				?>
+				<?php woocommerce_content(); ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -14,6 +14,26 @@
 HEADER MOST PAGES
 -------------------------*/
 
+/*-- Navigation --*/
+header#masthead{
+	text-align: right;
+}
+
+#mainnav{
+	display: inline-block!important;
+	float: none!important;
+}
+
+#mainnav ul li a{
+	font-size: 1.3em!important;
+}
+
+#mainnav .sub-menu li a {
+    font-size: 1em!important;
+}
+
+/*-- nav end--*/
+
 .child-header-home{
 	height: 600px;
 	width:100%;
@@ -59,16 +79,50 @@ HEADER MOST PAGES
 	height: 30px;
 }
 
+.mc4wp-form-basic {
+	width: 100% !important;
+}
+
 .mc4wp-form-basic input[type=submit]{
 	background: transparent;
 	border: solid 1px white;
 	border-radius: 15px;
 }
 
+.mc4wp-form-basic input[type=text]{
+	display: inline-block;
+	width: 49% !important;
+}
+
+.mc4wp-form-basic input[type=email]{
+	width: 49% !important;
+    display: inline-block !important;
+}
+
 .subscribe{
 	border: 1px solid transparent;
 	border-radius: 15px;
 	width: 100%;
+}
+
+.mc4wp-form-fields{
+	width: 100%;
+}
+
+.mc4wp-form-fields p:first-child{
+	overflow: hidden;
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+.mc4wp-form-fields p:nth-child(2){
+	vertical-align: middle;
+    margin-top: 20px;
+    width: 19%;
+}
+
+.mc4wp-form-fields p label{
+	display: none !important;
 }
 
 /* ----------------------
@@ -306,13 +360,36 @@ h3{
 	margin-right: 3%;
 }
 
-.btn-primary{
+.even .btn-primary{
 	display: block;
 	background-color: #1b69cf;
 	text-align: center;
 	margin: auto;
 	margin-bottom: 30px;
 	border-radius: 15px;
+	border: 2px solid #fff !important;
+}
+
+.odd .btn-primary{
+	display: block;
+	background-color: #1b69cf;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 30px;
+	border-radius: 15px;
+	border: 2px solid #f4f4f4 !important;
+}
+
+.even .btn-primary:hover {
+  background-color: #fff;
+  color: #1b69cf;
+  border:2px solid #1b69cf !important;
+}
+
+.odd .btn-primary:hover {
+  background-color: #f4f4f4;
+  color: #1b69cf;
+  border:2px solid #1b69cf !important;
 }
 
 /*--------------------------
@@ -438,6 +515,76 @@ a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     color: #1b69cf;
 }
 
+.woocommerce div.product form.cart .button {
+    vertical-align: bottom !important;
+    margin-top: 2%;
+    margin-left: 1%;
+    border: 2px solid #fff !important;
+    border-radius: 15px;
+    background-color: #1b69cf !important;
+}
+
+.woocommerce div.product form.cart .button:hover{
+	background-color: #fff !important;
+	border:2px solid #1b69cf !important;
+	border-radius: 15px;
+	color: #1b69cf !important;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    left: auto;
+    background-color: #1b69cf;
+    color: #fff;
+    border: 2px solid #fff !important;
+    border-radius: 15px;
+}
+
+.woocommerce #review_form #respond .form-submit input:hover{
+	background-color: #fff !important;
+	border:2px solid #1b69cf !important;
+	border-radius: 15px;
+	color: #1b69cf !important;
+}
+
+a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: #1b69cf !important;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    border: 2px solid #f4f4f4 !important;
+    border-radius: 15px;
+}
+
+a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt:hover { 
+    -webkit-font-smoothing: antialiased;
+    background-color: #ebe9eb !important;
+	border:2px solid #1b69cf !important;
+	border-radius: 15px;
+	color: #1b69cf;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {  
+    border-radius: 15px !important;
+    color: #ffffff !important;
+    background-color: #1b69cf !important;
+    border: 1px solid #fff !important; 
+}
+
+.woocommerce input.button:hover {
+    background-color: #fff !important;
+	border:1px solid #1b69cf !important;
+	border-radius: 15px;
+	color: #1b69cf !important;
+}
+.woocommerce p.stars a {
+	color: #259540 !important;
+}
+
+.woocommerce table.shop_table th {
+    font-weight: 700;
+    padding: 9px 12px;
+    color: #1b69cf !important;
+}
+
 /*--------------------------
 MAILCHIMP STYLING
 ---------------------------*/
@@ -544,8 +691,62 @@ label {
 WPFORMS STYLING
 ---------------------------*/
 
- div.wpforms-container-full .wpforms-form button[type=submit]{
+ div.wpforms-container-full .wpforms-form button[type=submit], #commentform input[type="submit"].submit{
     background-color: #1b69cf !important;
+    border: 2px solid #fff !important;
     border-radius: 15px;
     color: #fff !important;
+}
+
+ div.wpforms-container-full .wpforms-form button[type=submit]:hover,  #commentform input[type="submit"].submit:hover{
+ 	background-color: #fff !important;
+ 	border: 2px solid #1b69cf !important;
+ 	border-radius: 15px;
+ 	color: #1b69cf !important;
+ }
+
+ /*--------------------------
+BLOG PAGE STYLING
+---------------------------*/
+
+#respond label{
+	color: #1b69cf !important;
+}
+
+.form-submit input [type="submit"]{
+	background-color: #1b69cf !important;
+    border: 1px solid #fff !important;
+}
+
+.comment-form-url{
+	display: none !important;
+}
+
+#secondary .widget-title {
+    color: #1b69cf !important;
+}
+
+.comment-reply-title {
+    font-size: 25px;
+    color: #1b69cf !important;
+}
+
+h2.title-post a{
+	color: #1b69cf !important;
+}
+
+ /*--------------------------
+TESTIMONIAL SLIDER STYLING
+---------------------------*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+   color: #1b69cf !important;
+}
+
+#text-slider {
+    width: 100%;
+    font-family: 'Open Sans';
+    font-size: 24px !important;
+    line-height: 35px !important;
+    color: #000 !important;
 }

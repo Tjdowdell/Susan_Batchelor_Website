@@ -34,7 +34,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-wrap">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
 				
 				<div class="col-xs-12">

@@ -47,57 +47,56 @@
 
 <div class="row odd">
 	<h2><?php echo $post_meta['2.1_testimonial_1_title'][0]?></h2>
-	<div class="col-xs-1"><h1 class="arrow"> < </h1></div>
-	<div class="col-xs-2">
-		<img class="testimonial" src="http://localhost/wordpress/wp-content/uploads/2016/08/tara.png" alt="Tara, Brisbane">
-	</div>
+	<div class="col-xs-1"><h1 class="arrow"></h1></div>
+
 	<div class="col-xs-1"></div>
 	<div class="col-xs-7">
-		<p class="textTestimonial"><?php echo $post_meta['2.2_testimonial_1_text'][0]?> </p>
+
+		<p class="textTestimonial"><?php echo do_shortcode('[text-slider]') ?> </p>
 	</div>
-	<div class="col-xs-1"><h1 class="arrow"> > </h1></div>
+	<div class="col-xs-2"></div>
+	<div class="col-xs-1"><h1 class="arrow"></h1></div>
 </div>
 
 <div class="row even">
 	<h2><?php echo $post_meta['3.1_hypnotherapy_session_title'][0]?></h2>
 	<h3><?php echo $post_meta['3.2_hypnotherapy_session_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['3.3_hypnotherapy_session_text'][0]?></p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
+	<a href="<?php echo get_home_url() . '/hypnotherapy-sessions/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
 </div>
 
 <div class="row odd">
 	<h2><?php echo $post_meta['4.1_past_life_title'][0]?></h2>
 	<h3><?php echo $post_meta['4.2_past_life_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['4.3_past_life_text'][0]?> </p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
+	<a href="<?php echo get_home_url() . '/hypnotherapy-sessions/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
 </div>
 
 <div class="row even">
 	<h2><?php echo $post_meta['5.1_workshop_title'][0]?></h2>
 	<h3><?php echo $post_meta['5.2_workshop_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['5.3_workshop_text'][0]?></p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
-</div>
+	<a href="<?php echo get_home_url() . '/workshops/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
 
 <div class="row odd">
 	<h2><?php echo $post_meta['6.1_voice_memo_title'][0]?></h2>
 	<h3><?php echo $post_meta['6.2_voice_memo_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['6.3_voice_memo_text'][0]?></p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
+	<button class="btn btn-primary" type="button" href="#">Download</button>
 </div>
 
 <div class="row even">
 	<h2><?php echo $post_meta['7.1_healing_book_title'][0]?></h2>
 	<h3><?php echo $post_meta['7.2_healing_book_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['7.3_healing_book_text'][0]?></p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
+	<a href="<?php echo get_home_url() . '/product/book/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
 </div>
 
 <div class="row odd">
 	<h2><?php echo $post_meta['8.1_funeral_celebrant_title'][0]?></h2>
 	<h3><?php echo $post_meta['8.2_funeral_celebrant_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['8.3_funeral_celebrant_text'][0]?></p>
-	<button class="btn btn-primary" type="button" href="#">Learn More</button>
+	<a href="<?php echo get_home_url() . '/funeral-celebrant/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
 </div>
 
 <div class="row even">
