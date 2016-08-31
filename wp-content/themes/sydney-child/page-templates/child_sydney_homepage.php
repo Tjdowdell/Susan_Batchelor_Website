@@ -77,6 +77,7 @@
 	<h3><?php echo $post_meta['5.2_workshop_subtitle'][0]?></h3>
 	<p class="description"><?php echo $post_meta['5.3_workshop_text'][0]?></p>
 	<a href="<?php echo get_home_url() . '/workshops/'; ?>"><button class="btn btn-primary" type="button" >Learn More</button></a>
+</div>
 
 <div class="row odd">
 	<h2><?php echo $post_meta['6.1_voice_memo_title'][0]?></h2>
